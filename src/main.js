@@ -15,6 +15,8 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 
+import api from '@/api' // 引入相关API请求接口
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
@@ -32,6 +34,9 @@ if (process.env.NODE_ENV === 'production') {
 Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
 // Vue.use(ElementUI)
+
+// 组件实例的原型的原型指向的是Vue.prototype,任意组件可以使用API相关解耦
+Vue.prototype.$API = api
 
 Vue.config.productionTip = false
 

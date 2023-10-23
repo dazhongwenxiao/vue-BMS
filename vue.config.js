@@ -27,7 +27,8 @@ module.exports = {
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'static',
-  lintOnSave: process.env.NODE_ENV === 'development',
+  // lintOnSave: process.env.NODE_ENV === 'development',
+  lintOnSave: false,
   productionSourceMap: false,
   devServer: {
     port: port,
@@ -40,7 +41,7 @@ module.exports = {
     proxy: {
       '/dev-api': {
         target: 'http://39.98.123.211:8170',
-        pathRewrite: {'^/dev-api': ''}
+        pathRewrite: { '^/dev-api': '' }
       }
     }
   },
