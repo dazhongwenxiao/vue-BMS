@@ -47,3 +47,7 @@
 .el-range-separator {
   box-sizing: content-box;
 }
+
+.el-tabs__nav-wrap::after{
+  position:static !important;
+}

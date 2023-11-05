@@ -118,7 +118,7 @@ export default {
       },
       // 代表分页器第几页
       page: 1,
-      limit: 3,
+      limit: 5,
       total: 0,
       list: [],
       dialogFormVisible: false,
